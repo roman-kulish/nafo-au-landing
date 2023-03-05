@@ -1,16 +1,36 @@
 @tailwind base;
 @tailwind components;
-
-html {
-  @apply font-body antialiased;
-}
-
 @tailwind utilities;
 
-a {
-    @apply font-semibold underline;
+html {
+    @apply font-body antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
+}
+
+blockquote {
+    @apply border-green-500 border border-l-8 border-green-700 rounded text-center pl-5 not-italic !important;
+}
+
+p {
+    @apply leading-relaxed text-lg mb-6;
+}
+
+a {
+    @apply underline text-cyan-900;
+}
+
+em {
+    @apply font-thin text-white text-lg leading-relaxed;
+}
+
+ul {
+    @apply mb-6;
+}
+
+
+li {
+    @apply mb-6 ml-5 text-lg;
 }
