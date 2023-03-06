@@ -3,7 +3,7 @@ module.exports = {
   content: ["./**/*.html"],
   theme: {
     fontFamily: {
-      body: ["Advent Pro", "sans-serif"],
+      body: ["Sofia Sans", "sans-serif"],
     },
     container: {
       center: true,

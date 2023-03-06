@@ -3,34 +3,45 @@
 @tailwind utilities;
 
 html {
-    @apply font-body antialiased;
+    @apply font-body font-normal antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+body {
+    @apply m-0 p-0 bg-blue-200;
 }
 
 blockquote {
-    @apply border-green-500 border border-l-8 border-green-700 rounded text-center pl-5 not-italic !important;
-}
-
-p {
-    @apply leading-relaxed text-lg mb-6;
+    @apply border border-l-4 rounded px-6;
 }
 
 a {
-    @apply underline text-cyan-900;
+    @apply transition underline text-cyan-700 !important;
+
+    &:hover {
+        @apply text-cyan-900 !important;
+    }
 }
 
-em {
-    @apply font-thin text-white text-lg leading-relaxed;
+.masonry {
+    @apply flex flex-wrap gap-1 m-0 p-0 list-none overflow-hidden;
 }
 
-ul {
-    @apply mb-6;
+.masonry li {
+    @apply flex-auto h-72 m-0 p-0 overflow-hidden;
+
+    &:last-child {
+        @apply md:flex-grow-0 !important;
+    }
 }
 
+.masonry li img {
+    @apply object-cover h-full w-full;
+}
 
-li {
-    @apply mb-6 ml-5 text-lg;
+.masonry-grid {
+    @apply grid sm:grid-cols-2 gap-1 list-none m-0 p-0;
+}
+
+.masonry-grid li {
+    @apply p-0 m-0;
 }
