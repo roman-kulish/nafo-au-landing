@@ -35,13 +35,25 @@ a {
 }
 
 .masonry li img {
-    @apply object-cover h-full w-full;
+    @apply object-cover h-full w-full opacity-80 transition-all duration-500 ease-in-out;
+
+    &:hover {
+        @apply opacity-100 scale-105;
+    }
 }
 
 .masonry-grid {
-    @apply grid sm:grid-cols-2 gap-1 list-none m-0 p-0;
+    @apply grid sm:grid-cols-3 gap-1 list-none m-0 p-0;
 }
 
 .masonry-grid li {
     @apply p-0 m-0;
+}
+
+.masonry-grid li img {
+    @apply opacity-80 transition-all duration-500 ease-in-out;
+
+    &:hover {
+        @apply opacity-100 scale-105;
+    }
 }
