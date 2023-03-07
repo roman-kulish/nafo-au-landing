@@ -17,8 +17,8 @@ deploy: build ## Deploy stack to AWS.
 
 sync: build ## Sync local assets with S3 bucket.
 	@cd $(FRONTEND) && \
-	aws s3 cp index.html $(BUCKET) && \
-	aws s3 sync --delete assets $(BUCKET)/assets
+	aws s3 cp index.html s3://$(BUCKET) && \
+	aws s3 sync --delete assets s3://$(BUCKET)/assets
 
 .DEFAULT_GOAL:=help
 .PHONY: help
