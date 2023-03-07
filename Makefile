@@ -1,6 +1,6 @@
 DIR=$(shell pwd)
 FRONTEND=$(DIR)/frontend
-INFRA=$(dir)/infra
+INFRA=$(DIR)/infra
 BUCKET=nafo.ukrainians.org.au
 
 install: ## Install Node modules.
