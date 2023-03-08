@@ -5,6 +5,7 @@ BUCKET=nafo.ukrainians.org.au
 
 install: ## Install Node modules.
 	@cd $(FRONTEND) && npm install
+	@cd $(INFRA) && npm install
 
 dev: ## Run development environment.
 	@cd $(FRONTEND) && npm run dev
