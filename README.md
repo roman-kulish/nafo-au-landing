@@ -1,5 +1,17 @@
 # NAFO Onboarding Page
 
+## Makefile
+
+```shell
+Usage: make <target>
+  install     Install Node modules.
+  dev         Run development environment.
+  build       Build frontend
+  deploy      Deploy stack to AWS.
+  sync        Sync local assets with S3 bucket.
+  help        Show this help.
+```
+
 ## Development Workflow
 
 NPM is used for compilation of scripts as well as live reloading when changes are made.
@@ -16,11 +28,15 @@ As always, we recommend you read the [official TailwindCSS docs](https://tailwin
 
 The project uses a mostly flat structure with a key folders and files:
 
+Frontend:
+
 - `assets` folder: This is where all of the projects styles, javascript, fonts (if any) and images live, each on their own folder for better organization. - One thing to keep in mind if that if you want to use the project as is and decide to rename the `styles` folder, be sure to update the `css` NPM script with the new name.
 - `browser-sync-config.js`: Pretty self-explanatory, this is the config that BrowserSync uses when we launch our live reload server. Here are the [options docs](https://www.browsersync.io/docs/options) in case you want to customize it.
 - `package.json`: Where our dependencies, [browserlist](https://github.com/browserslist/browserslist) config and NPM scripts live. - _Note_: Since we mainly use `yarn` for our local development, you’ll also see a `yarn.lock` file on the project.
 - `postcss.config.js`: This is where the styling magic happens, here you can add any postCSS plugin that you fancy, we’re currently only using these at the moment: - TailwindCSS: obviously - [postcss-nested](https://github.com/postcss/postcss-nested): To mimic SCSS nesting - [autoprefixer](https://github.com/postcss/autoprefixer): To support old browsers - [postcss-clean](https://github.com/leodido/postcss-clean): To minify our CSS on production
 - `tailwind.config.js`: The project’s tailwind config, here you will find our custom classes and tailwind plugin’s config.
+
+Infra: contains CDK project to deploy to AWS.
 
 Everything else are the HTML templates.
 
@@ -29,3 +45,15 @@ Everything else are the HTML templates.
 Each of our projects make use of `extend` as much as possible for our tailwind config, but we do override some fo the defaults, like the following:
 
 - `fontFamily`: We tend to add our our fonts here and only use those
+
+## Deployment
+
+This project is deployed into S3 bucket, configured as a static website. Requests are proxied to the bucket via CloudFlare CDN.
+
+To deploy:
+
+- Bootstrap CDK project: `cdk bootstrap`, this is one off command.
+- Create bucket, roles etc: `make deploy`.
+- To sync assets with the bucket: `make sync`.
+
+Configure CloudFlare, enjoy! 😁
