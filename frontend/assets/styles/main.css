@@ -15,7 +15,7 @@ blockquote {
 }
 
 a {
-    @apply transition underline text-cyan-700 !important;
+    @apply transition transition-all duration-150 underline text-cyan-700 !important;
 
     &:hover {
         @apply text-cyan-900 !important;
