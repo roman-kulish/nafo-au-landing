@@ -1,0 +1,10 @@
+<ul class="flex items-center justify-center space-x-2 md:space-x-8 text-sm font-medium">
+{{ range $.Site.Home.AllTranslations }}
+    <li class="m-0 p-0">
+        <a href="{{ .Permalink }}" class="inline-flex items-center justify-center">
+            <i class="block w-5 h-5 mr-2">{{ readFile .Language.Params.image | safeHTML }}</i>
+            {{ .Language.LanguageName }}
+        </a>
+    </li>
+{{ end }}
+</ul>

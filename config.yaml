@@ -1,0 +1,43 @@
+baseURL: https://nafo.ukrainians.org.au/
+
+title: NAFO
+
+defaultContentLanguage: en-au
+timeZone: Australia/Sydney
+
+theme: nafo
+
+enableRobotsTXT: true
+
+disableKinds: [ "RSS" ]
+
+# Disable default taxonomies.
+taxonomies:
+
+languages:
+  en-au:
+    languageName: English
+    weight: 1
+    Params:
+      image: 'static/images/flags/au.svg'
+
+  uk:
+    languageName: Українська
+    weight: 2
+    Params:
+      image: 'static/images/flags/ua.svg'
+
+  pl:
+    languageName: Polski
+    weight: 3
+    Params:
+      image: 'static/images/flags/pl.svg'
+
+  es:
+    languageName: Español
+    weight: 4
+    Params:
+      image: 'static/images/flags/es.svg'
+
+params:
+  images: [ '/images/social.png' ]

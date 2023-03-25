@@ -17,6 +17,7 @@ export class InfraStack extends cdk.Stack {
             publicReadAccess: true,
             versioned: false,
             websiteIndexDocument: 'index.html',
+            websiteErrorDocument: '404.html'
         });
 
         bucket.addToResourcePolicy(new PolicyStatement({

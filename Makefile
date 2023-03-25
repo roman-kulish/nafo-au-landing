@@ -1,25 +1,23 @@
 DIR=$(shell pwd)
-FRONTEND=$(DIR)/frontend
+THEME=$(DIR)/themes/nafo
 INFRA=$(DIR)/infra
 BUCKET=nafo.ukrainians.org.au
 
 install: ## Install Node modules.
-	@cd $(FRONTEND) && npm install
+	@cd $(THEME) && npm install
 	@cd $(INFRA) && npm install
 
 dev: ## Run development environment.
-	@cd $(FRONTEND) && npm run dev
+	@hugo serve
 
 build: ## Build frontend
-	@cd $(FRONTEND) && npm run build
+	@hugo
 
-deploy: build ## Deploy stack to AWS.
+deploy: ## Deploy stack to AWS.
 	@cd $(INFRA) && cdk deploy --require-approval never
 
 sync: build ## Sync local assets with S3 bucket.
-	@cd $(FRONTEND) && \
-	aws s3 cp index.html s3://$(BUCKET) && \
-	aws s3 sync --delete assets s3://$(BUCKET)/assets
+	aws s3 sync --delete public s3://$(BUCKET)
 
 .DEFAULT_GOAL:=help
 .PHONY: help
