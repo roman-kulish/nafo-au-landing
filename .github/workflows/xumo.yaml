@@ -34,7 +34,7 @@ jobs:
       - name: Install Prerequisites
         run: |
           make install
-          npm install postcss-cli
+          npm install postcss-cli aws-cdk
 
       - name: Build & Deploy
         run: |
