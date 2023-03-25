@@ -17,7 +17,7 @@ deploy: ## Deploy stack to AWS.
 	@cd $(INFRA) && cdk deploy --require-approval never
 
 sync: build ## Sync local assets with S3 bucket.
-	aws s3 sync --delete public s3://$(BUCKET)
+	aws s3 sync public s3://$(BUCKET)
 
 .DEFAULT_GOAL:=help
 .PHONY: help
