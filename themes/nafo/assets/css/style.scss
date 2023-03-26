@@ -26,20 +26,6 @@ h2 {
   @apply md:scroll-mt-24;
 }
 
-.langbar {
-  background-size: contain;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  position: relative;
-  display: inline-block;
-  width: 1.33333333em;
-  line-height: 1em;
-
-  &:before {
-    content: '\00a0';
-  }
-}
-
 .masonry {
   @apply flex flex-wrap gap-1 m-0 p-0 list-none;
 }
@@ -50,6 +36,10 @@ h2 {
   &:last-child {
     @apply md:flex-grow-0;
   }
+}
+
+.flag svg {
+  @apply w-5 h-5 mr-2;
 }
 
 .masonry li img {
