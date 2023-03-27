@@ -10,11 +10,13 @@
 </header>
 
 <main class="container mx-auto md:pb-8 relative -mt-24 md:max-w-5xl">
-    <div class="container mx-auto bg-white py-4 px-6 md:shadow-xl md:rounded-2xl">
-        {{- block "main" . }}
-            {{ partial "submenu.html" . }}
-            {{ .Content }}
-        {{- end }}
+    {{ partial "header.html" . }}
+
+    <div class="container mx-auto bg-white py-4 px-6 md:shadow-xl md:rounded-b-2xl">
+        {{ block "main" . }}
+        {{ partial "submenu.html" . }}
+        {{ .Content }}
+        {{end}}
     </div>
 </main>
 </body>
