@@ -16,6 +16,7 @@
         {{ block "main" . }}
         {{ partial "submenu.html" . }}
         {{ .Content }}
+        {{ partial "scrollToTop.html" . }}
         {{end}}
     </div>
 </main>

@@ -11,13 +11,11 @@
                         {{ $currentItemCSS := "bg-blue-900 text-white hover:text-white rounded-md px-3 py-2 text-md font-medium" }}
                         {{ $itemCSS := "text-gray-300 hover:bg-blue-800 hover:text-white rounded-md px-3 py-2 text-md font-medium" }}
                         {{ range .Site.Menus.main }}
-                        {{ if .Page }}
                         <a
                                 href="{{ .PageRef }}"
                                 class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}{{ $currentItemCSS }}{{else}}{{ $itemCSS }}{{ end }}">
                         {{ .Name }}
                         </a>
-                        {{end}}
                         {{end}}
                     </div>
                 </div>

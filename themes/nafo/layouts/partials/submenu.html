@@ -11,7 +11,7 @@
 {{end}}
 
 {{ if or $hasSubmenu .Page.IsTranslated }}
-<nav class="grid gap-4 pb-4 grid-cols-{{ $gridCols }} bg-white">
+<nav class="grid gap-4 pb-4 submenu-grid-{{ $gridCols }} bg-white">
     {{ if $hasSubmenu }}
     <ul class="flex flex-col gap-4 md:gap-2 text-sm font-medium">
         {{ range .Page.Params.submenu }}

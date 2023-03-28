@@ -27,6 +27,18 @@ h2 {
   @apply scroll-mt-4;
 }
 
+.submenu-grid-0 {
+  @apply grid-cols-none;
+}
+
+.submenu-grid-1 {
+  @apply grid-cols-1;
+}
+
+.submenu-grid-2 {
+  @apply grid-cols-2;
+}
+
 .masonry {
   @apply flex flex-wrap gap-1 m-0 p-0 list-none;
 }
