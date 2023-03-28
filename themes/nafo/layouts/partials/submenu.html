@@ -2,9 +2,16 @@
 {{ with .Page.Params.submenu }}
 {{ $hasSubmenu = gt (len .) 0 }}
 {{end}}
+{{ $gridCols := 0 }}
+{{ if $hasSubmenu }}
+{{ $gridCols = add $gridCols 1 }}
+{{end}}
+{{ if .Page.IsTranslated }}
+{{ $gridCols = add $gridCols 1 }}
+{{end}}
 
 {{ if or $hasSubmenu .Page.IsTranslated }}
-<nav class="grid gap-4 pb-4 grid-cols-2 bg-white">
+<nav class="grid gap-4 pb-4 grid-cols-{{ $gridCols }} bg-white">
     {{ if $hasSubmenu }}
     <ul class="flex flex-col gap-4 md:gap-2 items-start justify-start text-sm font-medium">
         {{ range .Page.Params.submenu }}

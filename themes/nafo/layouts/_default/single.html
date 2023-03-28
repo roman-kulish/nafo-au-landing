@@ -1,4 +1,7 @@
 {{ define "main" }}
 {{ partial "submenu.html" . }}
-{{ .Content }}
+
+<article class="prose max-w-none">
+    {{ .Content }}
+</article>
 {{ end }}

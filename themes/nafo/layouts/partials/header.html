@@ -14,7 +14,7 @@
                         font-medium" }}
                         {{ range .Site.Menus.main }}
                         <a
-                                href="{{ .URL }}"
+                                href="{{ .PageRef }}"
                                 class="{{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent
                         "main" .) }}{{ $currentItemCSS }}{{else}}{{ $itemCSS }}{{ end }}">
                         {{ .Name }}
