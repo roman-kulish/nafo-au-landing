@@ -140,7 +140,7 @@ _Ministry of Youth and Sports (Ukraine)_
 > Noting the IOC’s stated position that no final decisions have been made, we strongly urge the IOC to address the
 > questions identified by all countries and reconsider its proposal accordingly.
 
-https://www.gov.uk/government/publications/statement-on-russias-war-on-ukraine-and-international-sport/statement-on-russias-war-on-ukraine-and-international-sport
+Source: https://www.gov.uk/government/publications/statement-on-russias-war-on-ukraine-and-international-sport/statement-on-russias-war-on-ukraine-and-international-sport
 
 ## Why We Do It
 
@@ -195,8 +195,7 @@ willing to). Example for Australia would be John Coates and Ian Chesterman.
 
 * International Olympic Committee – IOC - https://www.linkedin.com/company/international-olympic-committee/
 * Ian Chesterman President, Australian Olympic Committee - https://www.linkedin.com/in/ian-chesterman-040366/
-* Matt Carroll AM Chief Executive Officer Australian Olympic
-  Committee -https://www.linkedin.com/in/matt-carroll-am-77a7822a/?originalSubdomain=au
+* Matt Carroll AM Chief Executive Officer Australian Olympic Committee - https://www.linkedin.com/in/matt-carroll-am-77a7822a/
 
 **Facebook**
 
