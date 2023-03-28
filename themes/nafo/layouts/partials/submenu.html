@@ -13,7 +13,7 @@
 {{ if or $hasSubmenu .Page.IsTranslated }}
 <nav class="grid gap-4 pb-4 grid-cols-{{ $gridCols }} bg-white">
     {{ if $hasSubmenu }}
-    <ul class="flex flex-col gap-4 md:gap-2 items-start justify-start text-sm font-medium">
+    <ul class="flex flex-col gap-4 md:gap-2 text-sm font-medium">
         {{ range .Page.Params.submenu }}
         <li>
             <a href="#{{ .id | safeHTMLAttr }}">{{ .title | safeHTML }}</a>
@@ -23,7 +23,7 @@
     {{end}}
 
     {{ if .Page.IsTranslated }}
-    <ul class="flex flex-col gap-4 md:gap-2 items-stretch justify-start text-sm font-medium">
+    <ul class="flex flex-col gap-4 md:gap-2 text-sm font-medium">
         {{ range .Page.Translations }}
         <li class="inline-flex items-center">
             <a href="{{ .Permalink }}" class="inline-flex items-center">
