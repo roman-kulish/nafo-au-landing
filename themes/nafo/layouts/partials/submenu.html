@@ -2,23 +2,22 @@
 {{ with .Page.Params.submenu }}
 {{ $hasSubmenu = gt (len .) 0 }}
 {{end}}
-{{ $hasTranslations := gt .Site.Home.AllTranslations 0 }}
 
-{{ if or $hasSubmenu $hasTranslations }}
-<nav class="flex flex-col gap-4 md:fixed md:shadow-xl top-0 left-0 z-20 w-full md:px-4 pb-4 md:py-4 bg-white">
+{{ if or $hasSubmenu .Page.IsTranslated }}
+<nav class="grid gap-4 pb-4 grid-cols-2 bg-white">
     {{ if $hasSubmenu }}
-    <ul class="flex flex-col md:flex-row items-start md:items-center justify-center md:space-x-8 text-sm font-medium">
+    <ul class="flex flex-col gap-4 md:gap-2 items-start justify-start text-sm font-medium">
         {{ range .Page.Params.submenu }}
         <li>
-            <a href="#{{ .id | safeHTMLAttr }}" class="block py-2 px-4 md:p-0">{{ .title | safeHTML }}</a>
+            <a href="#{{ .id | safeHTMLAttr }}">{{ .title | safeHTML }}</a>
         </li>
         {{ end }}
     </ul>
     {{end}}
 
-    {{ if $hasTranslations }}
-    <ul class="flex items-center justify-center space-x-2 md:space-x-8 text-sm font-medium">
-        {{ range .Site.Home.AllTranslations }}
+    {{ if .Page.IsTranslated }}
+    <ul class="flex flex-col gap-4 md:gap-2 items-stretch justify-start text-sm font-medium">
+        {{ range .Page.Translations }}
         <li class="inline-flex items-center">
             <a href="{{ .Permalink }}" class="inline-flex items-center">
                 <img class="inline-block w-5 h-5 mr-2" src="{{ .Language.Params.image }}"
