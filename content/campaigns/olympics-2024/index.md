@@ -5,7 +5,7 @@ date: 2023-03-27T00:00:00.000Z
 expiryDate: 2023-03-31T00:00:00.000Z
 
 images:
-- featured_banner.jpg
+- /campaigns/olympics-2024/featured_banner.jpg
 
 submenu:
 - title: Q&A on solidarity with Ukraine, sanctions against Russia and Belarus, and the status of athletes from these countries.
