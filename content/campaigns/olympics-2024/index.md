@@ -24,7 +24,7 @@ submenu:
 
 | Scope    | Global         |
 |----------|----------------|
-| End date | March 28, 2023 |
+| End date | March 30, 2023 |
 
 ## Q&A on solidarity with Ukraine, sanctions against Russia and Belarus, and the status of athletes from these countries.
 
@@ -180,8 +180,7 @@ Post on and comment under existing posts on the social media pages (Twitter, Ins
 Thomas Bach, and top senior representatives of the National Olympic Committee of your country (and others if you are
 willing to). Example for Australia would be John Coates and Ian Chesterman.
 
-Check Google Drive for materials to use and
-examples: https://drive.google.com/drive/folders/1qHz8WWYVvS17mog2V2ICsFl67lH_xhW9?usp=share_link
+> Please see this Google Drive folder for materials to use and examples: https://drive.google.com/drive/folders/1qHz8WWYVvS17mog2V2ICsFl67lH_xhW9?usp=share_link
 
 **Twitter:**
 
