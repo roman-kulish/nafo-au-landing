@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default site.Language.Lang  }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+<main class="container mx-auto md:py-8 relative md:max-w-5xl">
+    {{ partial "header.html" . }}
+
+    <div class="container mx-auto bg-white py-4 px-6 md:shadow-xl md:rounded-b-2xl">
+        {{ block "main" . }}
+        {{end}}
+    </div>
+</main>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

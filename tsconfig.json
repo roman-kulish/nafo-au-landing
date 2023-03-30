@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "ESNext"],
+    "sourceMap": false,
+    "declaration": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node"
+  },
+  "include": ["assets/js/*.ts"],
+  "exclude": ["node_modules"]
+}
