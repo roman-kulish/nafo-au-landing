@@ -37,15 +37,14 @@
                 {{ $currentItemCSS := "bg-blue-700 text-white hover:text-white rounded-md px-3 py-2 text-md font-bold" }}
                 {{ $itemCSS := "text-gray-300 hover:bg-blue-800 hover:text-white rounded-md px-3 py-2 text-md font-medium" }}
                 {{ range .Site.Menus.main }}
-                <a
-                        href="{{ .PageRef }}"
-                        class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}{{ $currentItemCSS }}{{else}}{{ $itemCSS }}{{ end }}">
-                {{ .Name }}
-                </a>
+                <li>
+                    <a
+                            href="{{ .PageRef }}"
+                            class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}{{ $currentItemCSS }}{{else}}{{ $itemCSS }}{{ end }}">
+                    {{ .Name }}
+                    </a>
                 {{end}}
-
-
-
+                </li>
             </ul>
         </div>
     </div>
