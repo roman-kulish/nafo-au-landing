@@ -6,18 +6,6 @@ expiryDate: 2023-03-31T00:00:00.000Z
 
 images:
 - /campaigns/olympics-2024/featured_banner.jpg
-
-submenu:
-- title: Q&A on solidarity with Ukraine, sanctions against Russia and Belarus, and the status of athletes from these countries.
-  id: qa-on-solidarity-with-ukraine-sanctions-against-russia-and-belarus-and-the-status-of-athletes-from-these-countries
-- title: The Goal of this Campaign
-  id: the-goal-of-this-campaign
-- title: Who Drives And Supports This Campaign
-  id: who-drives-and-supports-this-campaign
-- title: Why We Do It
-  id: why-we-do-it
-- title: How You Can Help
-  id: how-you-can-help
 ---
 
 # International Olympic Committee Campaign to Ban Russian and Belorussian Athletes
