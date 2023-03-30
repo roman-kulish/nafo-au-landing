@@ -29,5 +29,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet">
 
+{{ $opts := dict "minify" true }}
+{{ $scripts := resources.Get "js/index.ts" | js.Build $opts | fingerprint }}
+<script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
+
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
