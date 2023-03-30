@@ -5,8 +5,6 @@ title: NAFO
 defaultContentLanguage: en-au
 timeZone: Australia/Sydney
 
-theme: nafo
-
 enableRobotsTXT: true
 
 disableKinds: [ "RSS" ]
@@ -16,7 +14,7 @@ taxonomies:
 
 menu:
   main:
-    - name: Home
+    - name: What is NAFO?
       pageRef: /
       weight: 10
 
