@@ -7,10 +7,10 @@ install: ## Install Node modules.
 	@cd $(INFRA) && npm install
 
 dev: ## Run development environment.
-	@hugo serve
+	@hugo serve --buildDrafts --buildFuture --buildExpired
 
 build: ## Build frontend
-	@hugo
+	@hugo --buildExpired
 
 deploy: ## Deploy stack to AWS.
 	@cd $(INFRA) && cdk deploy --require-approval never

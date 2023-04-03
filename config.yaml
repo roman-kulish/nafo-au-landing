@@ -18,9 +18,9 @@ menu:
       pageRef: /
       weight: 10
 
-    - name: Campaigns
-      pageRef: /campaigns
-      weight: 20
+#    - name: Campaigns
+#      pageRef: /campaigns
+#      weight: 20
 
 languages:
   en-au:
