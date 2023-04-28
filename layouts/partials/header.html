@@ -5,20 +5,16 @@
         </a>
         <div class="flex items-center md:order-2">
             {{ if .Page.IsTranslated }}
-            <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-md rounded-lg cursor-pointer text-gray-300 hover:bg-blue-800 hover:text-white">
-                <img class="inline-block w-5 h-5 mr-2" src="{{ .Language.Params.image }}"
-                     alt="{{ .Language.LanguageName | safeHTMLAttr }}"/>
+            <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-md rounded-lg cursor-pointer text-white bg-[#16369c] hover:bg-blue-800 hover:text-white">
                 {{ .Page.Language.LanguageName }}
             </button>
             <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-xl" id="language-dropdown-menu">
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-xl" id="language-dropdown-menu" style="margin: 0 !important;">
                 <ul class="py-2 font-medium">
                     {{ range .Page.Translations }}
                     <li>
                         <a href="{{ .Permalink }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                             <div class="inline-flex items-center">
-                                <img class="inline-block w-5 h-5 mr-2" src="{{ .Language.Params.image }}"
-                                     alt="{{ .Language.LanguageName | safeHTMLAttr }}"/>
                                 {{ .Language.LanguageName }}
                             </div>
                         </a>

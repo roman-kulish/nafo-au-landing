@@ -26,26 +26,26 @@ languages:
   en-au:
     languageName: English
     weight: 1
-    Params:
-      image: '/images/flags/au.svg'
 
   uk:
     languageName: Українська
     weight: 2
-    Params:
-      image: '/images/flags/ua.svg'
 
   pl:
     languageName: Polski
     weight: 3
-    Params:
-      image: '/images/flags/pl.svg'
 
   es:
     languageName: Español
     weight: 4
-    Params:
-      image: '/images/flags/es.svg'
+
+  zh-HANS:
+    languageName: 中文简体
+    weight: 5
+
+  zh-HANT:
+    languageName: 中文繁體
+    weight: 6
 
 params:
   images: [ '/images/social.png' ]
