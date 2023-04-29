@@ -1,21 +1,17 @@
 DIR=$(shell pwd)
-INFRA=$(DIR)/infra
 BUCKET=nafo.ukrainians.org.au
-
-install: ## Install Node modules.
-	npm install
-	@cd $(INFRA) && npm install
 
 dev: ## Run development environment.
 	@hugo serve --buildDrafts --buildFuture --buildExpired
+
+install: ## Install Node modules.
+	npm install
+	npm install -g postcss-cli esbuild
 
 build: ## Build frontend
 	@hugo --buildExpired
 
 all: install build ## Install Node modules and build.
-
-sync: build ## Sync local assets with S3 bucket.
-	aws s3 sync public s3://$(BUCKET) --delete --exclude 'videos/*'
 
 .DEFAULT_GOAL:=help
 .PHONY: help
