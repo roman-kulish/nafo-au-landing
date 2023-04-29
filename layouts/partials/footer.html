@@ -1,2 +1,2 @@
 {{ $scripts := resources.Get "js/index.ts" | js.Build | minify | fingerprint }}
-<script type="text/javascript" src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}"></script>
+<script type="text/javascript" src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" crossorigin="anonymous"></script>
