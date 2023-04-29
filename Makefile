@@ -12,8 +12,7 @@ dev: ## Run development environment.
 build: ## Build frontend
 	@hugo --buildExpired
 
-deploy: ## Deploy stack to AWS.
-	@cd $(INFRA) && cdk deploy --require-approval never
+all: install build ## Install Node modules and build.
 
 sync: build ## Sync local assets with S3 bucket.
 	aws s3 sync public s3://$(BUCKET) --delete --exclude 'videos/*'
