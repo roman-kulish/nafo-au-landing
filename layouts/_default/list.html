@@ -1,14 +1,14 @@
 {{ define "main" }}
-<div class="prose max-w-none">
+  <div class="prose max-w-none">
     <header>
-        <h1>{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
     </header>
     <main>
-        <div class="grid gap-4 md:grid-cols-2">
+      <div class="grid gap-4 md:grid-cols-2">
         {{ range .Pages }}
-        {{ partial "contentCard" . }}
-        {{end}}
-        </div>
+          {{ partial "contentCard" . }}
+        {{ end }}
+      </div>
     </main>
-</div>
-{{end}}
+  </div>
+{{ end }}
