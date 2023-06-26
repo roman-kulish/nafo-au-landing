@@ -35,4 +35,4 @@ languageName = "中文繁體"
 weight = 6
 
 [params]
-images = [ "/images/social.png" ]
+images = [ "/images/featured.png" ]
