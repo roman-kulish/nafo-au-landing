@@ -4,6 +4,7 @@ module.exports = {
     content: [
         "layouts/**/*.html",
         "content/**/*.html",
+        "./src/**/*.js",
     ],
     theme: {
         fontFamily: {
@@ -13,6 +14,10 @@ module.exports = {
             center: true,
         },
         extend: {},
+    },
+    future: {
+        purgeLayersByDefault: true,
+        removeDeprecatedGapUtilities: true,
     },
     plugins: [
         require("@tailwindcss/typography"),

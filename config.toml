@@ -1,0 +1,38 @@
+baseURL = "https://nafo.ukrainians.org.au/"
+title = "NAFO"
+defaultContentLanguage = "en-au"
+timeZone = "Australia/Sydney"
+enableRobotsTXT = true
+disableKinds = [ "RSS" ]
+
+[[menu.main]]
+name = "What is NAFO?"
+pageRef = "/"
+weight = 10
+
+[languages.en-au]
+languageName = "English"
+weight = 1
+
+[languages.uk]
+languageName = "Українська"
+weight = 2
+
+[languages.pl]
+languageName = "Polski"
+weight = 3
+
+[languages.es]
+languageName = "Español"
+weight = 4
+
+[languages.zh-HANS]
+languageName = "中文简体"
+weight = 5
+
+[languages.zh-HANT]
+languageName = "中文繁體"
+weight = 6
+
+[params]
+images = [ "/images/featured.png" ]
